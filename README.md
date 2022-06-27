@@ -2,6 +2,18 @@
 
 This is a tutorial exercise to learn redux
 
+## Installation
+
+```
+$ npx create-react-app@5.0.1 redux-toolkit-tutorial
+$ cd redux-toolkit-tutorial
+$ npm install @reduxjs/toolkit react-redux
+```
+
+Delete all files in <kbd>src</kbd> except `App.js`, `index.css` and `index.js`.
+
+## Coding
+
 create `store.js` in app in src
 
 ```js
@@ -85,6 +97,7 @@ export default Counter;
 ```
 
 Import `store` and `Provider` in `index.js`.
+
 ```jsx
 import { createRoot } from "react-dom/client";
 import React from "react";
@@ -103,7 +116,6 @@ root.render(
   </React.StrictMode>
 );
 ```
-
 
 ## Credits
 
