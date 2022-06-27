@@ -1,6 +1,12 @@
 # Redux-toolkit-tutorial
 
+- [Installation](#install)
+- [Coding](#code)
+- [Credits](#credits)
+
 This is a tutorial exercise to learn redux
+
+<a name="install"></a>
 
 ## Installation
 
@@ -11,6 +17,8 @@ $ npm install @reduxjs/toolkit react-redux
 ```
 
 Delete all files in <kbd>src</kbd> except `App.js`, `index.css` and `index.js`.
+
+<a name="code"></a>
 
 ## Coding
 
@@ -116,6 +124,8 @@ root.render(
   </React.StrictMode>
 );
 ```
+
+<a name="credits"></a>
 
 ## Credits
 
