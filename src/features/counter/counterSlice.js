@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   count: 0,
+  max: 10,
+  min: 0,
 };
 
 export const counterSlice = createSlice({
@@ -9,14 +11,21 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.count += 1;
+      state.count += +(state.count < state.max);
     },
     decrement: (state) => {
-      state.count -= 1;
+      state.count -= +(state.count > state.min);
+    },
+    reset: (state) => {
+      state.count = state.min;
+    },
+    incrementByAmount: (state, action) => {
+      state.count += action.payload;
     },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, reset, incrementByAmount } =
+  counterSlice.actions;
 
 export default counterSlice.reducer;
